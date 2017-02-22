@@ -10,11 +10,10 @@ namespace TypeSafetyDemo
     class Program
     {
         static string Status;
-        static List<ILeftover> Leftovers;
         static void Main(string[] args)
         {
-            Leftovers = new List<ILeftover>();
             Person person = new Farmer();
+            (person as Farmer).EnableFarming = false;
             person.Inventory.Add(new Apple());
             person.Inventory.Add(new Apple());
             person.Inventory.Add(new Apple());
@@ -30,7 +29,7 @@ namespace TypeSafetyDemo
                 Console.Clear();
                 Console.WriteLine("Status: " + Status);
                 Console.WriteLine("Belly: " + person.Belly.ToString());
-                Console.WriteLine("Leftovers: " + Leftovers.Count.ToString());
+                Console.WriteLine("Leftovers: " + person.Leftovers.Count.ToString());
             }
             Console.WriteLine("Person is dead :(");
         }
@@ -48,11 +47,10 @@ namespace TypeSafetyDemo
 
                 // Eat
                 Status = "Eating " + consumable.GetType().Name + "...";
-                var leftovers = await person.Eat(consumable);
+                await person.EatAndStoreLeftovers(consumable);
 
                 // Done
                 Status = "Waiting.";
-                Leftovers.AddRange(leftovers);
             }
         }
 
