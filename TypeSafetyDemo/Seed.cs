@@ -16,7 +16,7 @@ namespace TypeSafetyDemo
         public int TimeToGrow { get; }
         public async Task<Fruit> Grow()
         {
-            await Task.Run(() => Thread.Sleep(TimeToGrow));
+            await Task.Delay(TimeToGrow);
             return typeof(T).GetConstructor(new Type[] { }).Invoke(new object[] { }) as Fruit;
         }
     }

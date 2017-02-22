@@ -60,7 +60,7 @@ namespace TypeSafetyDemo
         /// <returns>The consumable item that was chosen, or null if there was no consumable item to choose</returns>
         public virtual async Task<IConsumable> ChooseConsumable()
         {
-            if (Inventory.Any())
+            if (!Inventory.Any())
             {
                 // No food to choose from :(
                 return null;
@@ -69,7 +69,7 @@ namespace TypeSafetyDemo
             {
                 // Wait for a decision
                 var decisionDelay = (decimal)4000 / Decisiveness;
-                await Task.Run(() => Thread.Sleep((int)Math.Ceiling(decisionDelay)));
+                await Task.Delay((int)Math.Ceiling(decisionDelay));
 
                 // Decide
                 var choice = Inventory[(new Random()).Next(0, Inventory.Count - 1)];
