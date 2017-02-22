@@ -7,7 +7,7 @@ namespace TypeSafetyDemo
     public abstract class Food : IConsumable
     {
         public abstract IEnumerable<ILeftover> Consume();
-        public bool IsPoison => false;
+        public virtual bool IsPoison => false;
         public abstract int FillValue { get; }
     }
 }

@@ -109,7 +109,14 @@ namespace TypeSafetyDemo
             var leftovers = await Eat(consumable);
             foreach (var item in leftovers)
             {
-                this.Leftovers.Add(item);
+                if (item is IConsumable)
+                {
+                    this.Inventory.Add(item as IConsumable);
+                }
+                else if (item is ILeftover)
+                {
+                    this.Leftovers.Add(item);
+                }
             }
         }
 

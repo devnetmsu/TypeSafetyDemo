@@ -43,19 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Apple.cs" />
-    <Compile Include="Banana.cs" />
-    <Compile Include="Farmer.cs" />
-    <Compile Include="Food.cs" />
-    <Compile Include="Fruit.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="IConsumable.cs" />
-    <Compile Include="ILeftover.cs" />
-    <Compile Include="ISeed.cs" />
+    <Compile Include="Food\Apple.cs" />
+    <Compile Include="Food\Banana.cs" />
+    <Compile Include="People\Farmer.cs" />
+    <Compile Include="Food\Food.cs" />
+    <Compile Include="Food\Fruit.cs" />
+    <Compile Include="People\Person.cs" />
+    <Compile Include="Food\IConsumable.cs" />
+    <Compile Include="Food\ILeftover.cs" />
+    <Compile Include="Food\ISeed.cs" />
+    <Compile Include="Food\PoisonApple.cs" />
+    <Compile Include="Food\PoisonAppleSeed.cs" />
+    <Compile Include="People\Spy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Seed.cs" />
-    <Compile Include="Watermelon.cs" />
+    <Compile Include="Food\Seed.cs" />
+    <Compile Include="Food\Watermelon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

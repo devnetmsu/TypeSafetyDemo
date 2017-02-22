@@ -13,10 +13,9 @@ namespace TypeSafetyDemo
         {
             // Set things up
             Person person = new Farmer();
-            (person as Farmer).EnableFarming = true;
             person.Inventory.Add(new Apple());
             person.Inventory.Add(new Apple());
-            person.Inventory.Add(new Apple());
+            person.Inventory.Add(new PoisonApple());
             person.Inventory.Add(new Watermelon());
 
             // Start the tasks
