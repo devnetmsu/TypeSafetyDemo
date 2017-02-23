@@ -72,7 +72,7 @@
   <Class Name="TypeSafetyDemo.PoisonAppleSeed">
     <Position X="12" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAJAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAJAAAA=</HashCode>
+      <HashCode>AAAAAAAJAAAAAAQAAAAAAAAAAAAgAAAAAAAAAAJAAAA=</HashCode>
       <FileName>Food\PoisonAppleSeed.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -84,11 +84,25 @@
       <FileName>People\Spy.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TypeSafetyDemo.People.Capitalist">
-    <Position X="8.5" Y="7" Width="1.5" />
+  <Class Name="TypeSafetyDemo.Capitalist">
+    <Position X="8.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>People\Capitalist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TypeSafetyDemo.Bacon">
+    <Position X="13.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Food\Bacon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TypeSafetyDemo.Vegan">
+    <Position X="6.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>People\Vegan.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="TypeSafetyDemo.ILeftover">
