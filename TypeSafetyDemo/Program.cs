@@ -28,6 +28,16 @@ namespace TypeSafetyDemo
             //PrintList((aVegan as Person).Inventory);
             //PrintList(aVegan.Inventory);
 
+            // Type Casting vs Type Conversion
+            var theSeed = new Seed<Apple>(10);
+            
+            ISeed aSeed = (ISeed)theSeed; // aSeed references theSeed, and will accept any ISeed
+            ISeed anotherSeed = theSeed as ISeed; // anotherSeed references theSeed.  This is faster than the above line because this one is only for casting, not conversion
+            PoisonAppleSeed poisonedSeed = (PoisonAppleSeed)theSeed; // Conversion (calls the explicit operator in PoisonAppleSeed.cs)
+            Apple nullApple = aSeed as Apple; // nullApple is null because Seed<Apple> is not in Apple's inheritance chain
+            Apple errorApple = (Apple)aSeed; // Will throw an invalid cast exception
+
+
             RunEatingSimulation();
 
             Console.ReadLine();

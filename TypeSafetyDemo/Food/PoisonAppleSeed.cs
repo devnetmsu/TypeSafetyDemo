@@ -44,5 +44,10 @@ namespace TypeSafetyDemo
         {
             return Task.FromResult(new PoisonApple() as Fruit);
         }
+
+        public static explicit operator PoisonAppleSeed(Seed<Apple> seed)
+        {
+            return new PoisonAppleSeed();
+        }
     }
 }
