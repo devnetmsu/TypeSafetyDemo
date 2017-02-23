@@ -44,7 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Food\Apple.cs" />
+    <Compile Include="Food\Bacon.cs" />
     <Compile Include="Food\Banana.cs" />
+    <Compile Include="Misc\Grease.cs" />
     <Compile Include="People\Capitalist.cs" />
     <Compile Include="People\Farmer.cs" />
     <Compile Include="Food\Food.cs" />
@@ -56,6 +58,7 @@
     <Compile Include="Food\PoisonApple.cs" />
     <Compile Include="Food\PoisonAppleSeed.cs" />
     <Compile Include="People\Spy.cs" />
+    <Compile Include="People\Vegan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Food\Seed.cs" />

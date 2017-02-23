@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,32 @@ namespace TypeSafetyDemo
 {
     class Program
     {
-        static string Status;
+        static void PrintList(IEnumerable theList)
+        {
+            Console.WriteLine($"The list contains:");
+            foreach (var item in theList)
+            {
+                Console.WriteLine(item.GetType().Name);
+            }
+        }
+        
         static void Main(string[] args)
+        {
+            //// Method shadowing
+            //var aVegan = new Vegan();
+            //aVegan.Inventory.Add(new Apple());
+            //aVegan.Inventory.Add(new Bacon());
+            //PrintList((aVegan as Person).Inventory);
+            //PrintList(aVegan.Inventory);
+
+            RunEatingSimulation();
+
+            Console.ReadLine();
+        }
+
+
+        static string Status;
+        static void RunEatingSimulation()
         {
             // Set things up
             Person person = new Farmer();
@@ -23,12 +48,12 @@ namespace TypeSafetyDemo
 
             // Start ShowStatus(person) and others without waiting for completion,
             // then hold on to the task so we can wait later
-            theTasks.Add(ShowStatus(person)); 
+            theTasks.Add(ShowStatus(person));
             theTasks.Add(HungerLoop(person));
             theTasks.Add(EatLoop(person));
 
             // Wait for the person to die (gruesome, I know)
-            Task.WaitAll(theTasks.ToArray());            
+            Task.WaitAll(theTasks.ToArray());
         }
 
         static async Task ShowStatus(Person person)

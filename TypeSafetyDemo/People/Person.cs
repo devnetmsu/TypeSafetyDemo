@@ -20,9 +20,9 @@ namespace TypeSafetyDemo
         /// <summary>
         /// The food that the person has
         /// </summary>
-        public IList<IConsumable> Inventory { get; }
+        public IList<IConsumable> Inventory { get; protected set; }
 
-        public IList<ILeftover> Leftovers { get; }
+        public IList<ILeftover> Leftovers { get; protected set; }
 
         /// <summary>
         /// A value from 0 to 100 indicating how full the person's belly is
