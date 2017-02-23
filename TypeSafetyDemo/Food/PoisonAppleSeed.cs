@@ -27,6 +27,14 @@ namespace TypeSafetyDemo
             }
         }
 
+        public decimal SellPrice
+        {
+            get
+            {
+                return 10;
+            }
+        }
+
         public IEnumerable<ILeftover> Consume()
         {
             return Enumerable.Empty<ILeftover>();
@@ -34,7 +42,7 @@ namespace TypeSafetyDemo
 
         public Task<Fruit> Grow()
         {
-            throw new NotImplementedException();
+            return Task.FromResult(new PoisonApple() as Fruit);
         }
     }
 }

@@ -39,7 +39,7 @@
   <Class Name="TypeSafetyDemo.Seed&lt;T&gt;">
     <Position X="10.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAABQAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Food\Seed.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -56,7 +56,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="TypeSafetyDemo.Farmer">
-    <Position X="6.75" Y="5.75" Width="1.5" />
+    <Position X="6.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAEAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>People\Farmer.cs</FileName>
@@ -72,22 +72,29 @@
   <Class Name="TypeSafetyDemo.PoisonAppleSeed">
     <Position X="12" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAA=</HashCode>
+      <HashCode>AAAAAAAJAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAJAAAA=</HashCode>
       <FileName>Food\PoisonAppleSeed.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="TypeSafetyDemo.Spy">
-    <Position X="8.5" Y="5.75" Width="1.5" />
+    <Position X="8.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>People\Spy.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="TypeSafetyDemo.People.Capitalist">
+    <Position X="8.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>People\Capitalist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="TypeSafetyDemo.ILeftover">
     <Position X="10.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Food\ILeftover.cs</FileName>
     </TypeIdentifier>
   </Interface>

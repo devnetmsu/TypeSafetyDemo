@@ -13,6 +13,15 @@ namespace TypeSafetyDemo
         {
             this.TimeToGrow = timeToGrow;
         }
+
+        public virtual decimal SellPrice
+        {
+            get
+            {
+                return 1;
+            }
+        }
+
         public int TimeToGrow { get; }
         public async Task<Fruit> Grow()
         {

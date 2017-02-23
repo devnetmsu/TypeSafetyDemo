@@ -8,5 +8,6 @@ namespace TypeSafetyDemo
 {
     public interface ILeftover
     {
+        decimal SellPrice { get; }
     }
 }
