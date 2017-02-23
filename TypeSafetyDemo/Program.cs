@@ -23,7 +23,8 @@ namespace TypeSafetyDemo
             //// Method shadowing
             //var aVegan = new Vegan();
             //aVegan.Inventory.Add(new Apple());
-            //aVegan.Inventory.Add(new Bacon());
+            //aVegan.Inventory.Add(new Bacon()); // Compiler Error
+            //(aVegan as Person).Inventory.Add(new Bacon());
             //PrintList((aVegan as Person).Inventory);
             //PrintList(aVegan.Inventory);
 

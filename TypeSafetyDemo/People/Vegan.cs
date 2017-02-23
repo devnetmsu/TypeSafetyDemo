@@ -8,6 +8,12 @@ namespace TypeSafetyDemo
 {
     public class Vegan : Person
     {
+
+        public Vegan() : base()
+        {
+            Inventory = new List<Fruit>();
+        }
+
         public override int Decisiveness
         {
             get
@@ -18,20 +24,14 @@ namespace TypeSafetyDemo
 
         /// <remarks>
         /// The vegan will never keep animal goods (like <see cref="Bacon"/>) in his or her inventory.
-        /// 
         /// </remarks>
-        public new IList<IConsumable> Inventory
+        public new IList<Fruit> Inventory { get; set; }
+
+        public override Task<IConsumable> ChooseConsumable()
         {
-            get
-            {
-                // Discard all non-fruit
-                base.Inventory = base.Inventory.Where(x => x is Fruit).ToList();
-                return base.Inventory;
-            }
-            set
-            {
-                base.Inventory = value.Where(x => x is Fruit).ToList();
-            }
+            var item = Inventory[0];
+            Inventory.RemoveAt(0);
+            return Task.FromResult<IConsumable>(item);
         }
     }
 }
